@@ -1,5 +1,6 @@
-define(function (require) {
-    var app = require('./app');
+import app from './app';
+
+export default function(require) {
 
     app.run(['$state', '$stateParams', '$rootScope', function ($state, $stateParams, $rootScope) {
         $rootScope.$state = $state;
@@ -34,4 +35,4 @@ define(function (require) {
                 controller: 'componentsCtrl'
             });
     }]);
-});
+}

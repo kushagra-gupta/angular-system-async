@@ -1,12 +1,12 @@
-define(function (require, exports, module) {
-    var angular = require('angular');
-    var asyncLoader = require('angular-async-loader');
+import angular from 'angular';
+import 'angular-async-router';
+import asyncLoader from 'angular-async-loader';
 
-    require('angular-ui-router');
+export default function (require, exports, module) {
 
     var app = angular.module('app', ['ui.router']);
 
     asyncLoader.configure(app);
 
     module.exports = app;
-});
+}

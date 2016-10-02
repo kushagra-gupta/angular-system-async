@@ -1,6 +1,7 @@
-define(function (require) {
-    var angular = require('angular');
-    var app = require('../app');
+import angular from 'angular';
+import app from '../app';
+
+export default function(require) {
 
     // put into a new module for demo
     var module = angular.module('my.mod.1', []);
@@ -22,4 +23,4 @@ define(function (require) {
     });
 
     app.useModule('my.mod.1');
-});
+}
